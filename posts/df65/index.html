@@ -32,119 +32,7 @@
 </script>
 
 
-<meta name="generator" content="Hexo 8.1.2"><style>mjx-container[jax="SVG"] {
-  direction: ltr;
-}
-
-mjx-container[jax="SVG"] > svg {
-  overflow: visible;
-}
-
-mjx-container[jax="SVG"][display="true"] {
-  display: block;
-  text-align: center;
-  margin: 1em 0;
-}
-
-mjx-container[jax="SVG"][justify="left"] {
-  text-align: left;
-}
-
-mjx-container[jax="SVG"][justify="right"] {
-  text-align: right;
-}
-
-g[data-mml-node="merror"] > g {
-  fill: red;
-  stroke: red;
-}
-
-g[data-mml-node="merror"] > rect[data-background] {
-  fill: yellow;
-  stroke: none;
-}
-
-g[data-mml-node="mtable"] > line[data-line] {
-  stroke-width: 70px;
-  fill: none;
-}
-
-g[data-mml-node="mtable"] > rect[data-frame] {
-  stroke-width: 70px;
-  fill: none;
-}
-
-g[data-mml-node="mtable"] > .mjx-dashed {
-  stroke-dasharray: 140;
-}
-
-g[data-mml-node="mtable"] > .mjx-dotted {
-  stroke-linecap: round;
-  stroke-dasharray: 0,140;
-}
-
-g[data-mml-node="mtable"] > svg {
-  overflow: visible;
-}
-
-[jax="SVG"] mjx-tool {
-  display: inline-block;
-  position: relative;
-  width: 0;
-  height: 0;
-}
-
-[jax="SVG"] mjx-tool > mjx-tip {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-mjx-tool > mjx-tip {
-  display: inline-block;
-  padding: .2em;
-  border: 1px solid #888;
-  font-size: 70%;
-  background-color: #F8F8F8;
-  color: black;
-  box-shadow: 2px 2px 5px #AAAAAA;
-}
-
-g[data-mml-node="maction"][data-toggle] {
-  cursor: pointer;
-}
-
-mjx-status {
-  display: block;
-  position: fixed;
-  left: 1em;
-  bottom: 1em;
-  min-width: 25%;
-  padding: .2em .4em;
-  border: 1px solid #888;
-  font-size: 90%;
-  background-color: #F8F8F8;
-  color: black;
-}
-
-foreignObject[data-mjx-xml] {
-  font-family: initial;
-  line-height: normal;
-  overflow: visible;
-}
-
-.MathJax path {
-  stroke-width: 3;
-}
-
-mjx-container[display="true"] {
-  overflow: auto hidden;
-}
-
-mjx-container[display="true"] + br {
-  display: none;
-}
-</style></head>
+<meta name="generator" content="Hexo 8.1.2"></head>
 <body>
   <div class="site-wrapper">
     <aside class="site-sidebar" id="sidebar">
@@ -295,7 +183,7 @@ mjx-container[display="true"] + br {
 <pre><code class="hljs bash">npx hexo clean &amp;&amp; npx hexo generate &amp;&amp; npx hexo deploy</code></pre>
 
 <h3 id="3-5-一个坑：GitHub-Pages-触发"><a href="#3-5-一个坑：GitHub-Pages-触发" class="headerlink" title="3.5 一个坑：GitHub Pages 触发"></a>3.5 一个坑：GitHub Pages 触发</h3><p>首次在 GitHub 里开启 Pages 后，网站不会自动发布。必须在<strong>开启之后</strong>再推一次新提交，GitHub 才会触发构建。这个坑在子博客部署时浪费了不少时间，解决方式是推一个空提交：</p>
-<pre><code class="hljs bash"><span class="hljs-built_in">cd</span> .deploy_git &amp;&amp; git commit --allow-empty -m <span class="hljs-string">"trigger"</span> &amp;&amp; git push</code></pre>
+<pre><code class="hljs bash"><span class="hljs-built_in">cd</span> .deploy_git &amp;&amp; git commit --allow-empty -m <span class="hljs-string">&quot;trigger&quot;</span> &amp;&amp; git push</code></pre>
 
 <h2 id="4-Wiki：Obsidian-Quartz的技术实现"><a href="#4-Wiki：Obsidian-Quartz的技术实现" class="headerlink" title="4. Wiki：Obsidian + Quartz的技术实现"></a>4. Wiki：Obsidian + Quartz的技术实现</h2><h3 id="4-1-为什么用-Wiki？"><a href="#4-1-为什么用-Wiki？" class="headerlink" title="4.1 为什么用 Wiki？"></a>4.1 为什么用 Wiki？</h3><p>课程笔记里有很多概念需要互相引用。传统的博客按文章组织，很难表达这种网状关系。</p>
 <p>此外最近上手Obsidian, 也想使用新工具进行创作</p>
@@ -315,17 +203,17 @@ mjx-container[display="true"] + br {
 
 <p><strong>关键</strong>：Obsidian 的 Vault 必须打开 <code>wiki/content/</code> 这个文件夹，而不是 <code>wiki/</code> 根目录。否则笔记会落在错误位置，发布不出去。</p>
 <h3 id="4-3-Quartz-配置"><a href="#4-3-Quartz-配置" class="headerlink" title="4.3 Quartz 配置"></a>4.3 Quartz 配置</h3><p><code>quartz.config.ts</code> 主要修改：</p>
-<pre><code class="hljs typescript"><span class="hljs-attr">pageTitle</span>: <span class="hljs-string">"flowwalker 的知识库"</span>,
-<span class="hljs-attr">locale</span>: <span class="hljs-string">"zh-CN"</span>,
-<span class="hljs-attr">baseUrl</span>: <span class="hljs-string">"flowwalker.github.io/flowwalker-wiki"</span>,
+<pre><code class="hljs typescript"><span class="hljs-attr">pageTitle</span>: <span class="hljs-string">&quot;flowwalker 的知识库&quot;</span>,
+<span class="hljs-attr">locale</span>: <span class="hljs-string">&quot;zh-CN&quot;</span>,
+<span class="hljs-attr">baseUrl</span>: <span class="hljs-string">&quot;flowwalker.github.io/flowwalker-wiki&quot;</span>,
 <span class="hljs-attr">analytics</span>: <span class="hljs-literal">null</span>,</code></pre>
 
 <p>字体则通过 <code>quartz/styles/custom.scss</code> 覆盖：</p>
-<pre><code class="hljs scss"><span class="hljs-selector-pseudo">:root</span><span class="hljs-selector-pseudo">:root</span> {
-  <span class="hljs-attr">--titleFont</span>: <span class="hljs-string">"Comic Neue"</span>, ...;
-  <span class="hljs-attr">--headerFont</span>: <span class="hljs-string">"Comic Neue"</span>, ...;
-  <span class="hljs-attr">--bodyFont</span>: <span class="hljs-string">"Comic Neue"</span>, ...;
-}</code></pre>
+<pre><code class="hljs scss"><span class="hljs-selector-pseudo">:root</span><span class="hljs-selector-pseudo">:root</span> &#123;
+  <span class="hljs-attr">--titleFont</span>: <span class="hljs-string">&quot;Comic Neue&quot;</span>, ...;
+  <span class="hljs-attr">--headerFont</span>: <span class="hljs-string">&quot;Comic Neue&quot;</span>, ...;
+  <span class="hljs-attr">--bodyFont</span>: <span class="hljs-string">&quot;Comic Neue&quot;</span>, ...;
+&#125;</code></pre>
 
 <p>这里用 <code>:root:root</code> 提高优先级，覆盖 Quartz 在末尾追加的 <code>:root</code> 变量定义。</p>
 <h3 id="4-4-部署"><a href="#4-4-部署" class="headerlink" title="4.4 部署"></a>4.4 部署</h3><p>Wiki 使用 GitHub Actions 自动构建：</p>
