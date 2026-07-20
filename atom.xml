@@ -10,7 +10,7 @@
   <rights>All rights reserved 2026, flowwalker</rights>
   <subtitle>于浩歌狂热之际饮冰寒凉</subtitle>
   <title>工程笔记</title>
-  <updated>2026-07-20T05:45:02.070Z</updated>
+  <updated>2026-07-20T10:18:32.887Z</updated>
   <entry>
     <author>
       <name>flowwalker</name>
@@ -26,12 +26,9 @@
     <id>https://flowwalker.github.io/engineering-notes-blog/posts/df65/</id>
     <link href="https://flowwalker.github.io/engineering-notes-blog/posts/df65/"/>
     <published>2026-07-19T18:00:00.000Z</published>
-    <summary>
-      <![CDATA[<p>最近重新规划了整套博客体系，从原来单一的主博客扩展为”主博客 + 4 个学科子博客 + 1 个 Wiki”的结构。这篇文章记录整体思路和关键实现步骤。</p>
-<h2 id="1-主博客：flowwalker-top"><a]]>
-    </summary>
+    <summary>合抱之木，生于毫末。</summary>
     <title>我的博客系统搭建记录：主博客、子博客与 Wiki</title>
-    <updated>2026-07-20T05:45:02.070Z</updated>
+    <updated>2026-07-20T10:18:32.887Z</updated>
   </entry>
   <entry>
     <author>
@@ -45,18 +42,8 @@
     <id>https://flowwalker.github.io/engineering-notes-blog/posts/3b26/</id>
     <link href="https://flowwalker.github.io/engineering-notes-blog/posts/3b26/"/>
     <published>2026-07-19T15:30:00.000Z</published>
-    <summary>
-      <![CDATA[<p>这里是我的工科课程学习笔记博客，用来整理信号、电路等工程课程的笔记与推导。</p>
-<p>计划覆盖的课程：</p>
-<ul>
-<li>信号与系统</li>
-<li>数字信号处理</li>
-<li>电路分析</li>
-<li>其他工程基础课</li>
-</ul>
-<p>公式用]]>
-    </summary>
+    <summary>纸上终浅，何不躬行?</summary>
     <title>工程笔记开张</title>
-    <updated>2026-07-19T15:24:00.160Z</updated>
+    <updated>2026-07-20T10:18:31.871Z</updated>
   </entry>
 </feed>
