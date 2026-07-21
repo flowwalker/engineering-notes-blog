@@ -48,18 +48,22 @@
 <body>
   <div id="loading-box" onclick="document.getElementById('loading-box').classList.add('loaded')">
     <div class="loading-bg">
-      <img class="loading-img" alt="加载中" src="/img/avar.png">
+      <img class="loading-img" alt="加载中" src="/engineering-notes-blog/img/avar.png">
       <div class="loading-image-dot"></div>
     </div>
   </div>
   <script>
   (function(){
+    var start = Date.now(), minShow = 1500;
     function endLoading() {
-      var box = document.getElementById('loading-box');
-      if (box) box.classList.add('loaded');
+      var remain = minShow - (Date.now() - start);
+      setTimeout(function() {
+        var box = document.getElementById('loading-box');
+        if (box) box.classList.add('loaded');
+      }, Math.max(0, remain));
     }
     window.addEventListener('load', endLoading);
-    setTimeout(endLoading, 2500);
+    setTimeout(endLoading, 3000);
   })();
   </script>
   <div class="site-wrapper">
