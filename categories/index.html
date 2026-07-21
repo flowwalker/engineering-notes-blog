@@ -47,6 +47,7 @@
 <meta name="generator" content="Hexo 8.1.2"></head>
 <body>
   <div id="loading-box" onclick="document.getElementById('loading-box').classList.add('loaded')">
+    <div class="loading-bar"></div>
     <div class="loading-bg">
       <img class="loading-img" alt="加载中" src="/engineering-notes-blog/img/avar.png">
       <div class="loading-image-dot"></div>
@@ -54,6 +55,12 @@
   </div>
   <script>
   (function(){
+    if (sessionStorage.getItem('preloaderShown')) {
+      var box = document.getElementById('loading-box');
+      if (box) box.classList.add('loaded');
+      return;
+    }
+    sessionStorage.setItem('preloaderShown', 'true');
     var start = Date.now(), minShow = 1500;
     function endLoading() {
       var remain = minShow - (Date.now() - start);
@@ -243,13 +250,13 @@
     <h2 class="page-title animate-entry animate-delay-0">分类</h2>
     <div class="category-cloud animate-stagger-40">
       
-        <a href="/engineering-notes-blog/categories/%E7%AB%99%E5%8A%A1/" class="category-item animate-entry">
-          <span class="category-name">站务</span>
+        <a href="/engineering-notes-blog/categories/%E5%8D%9A%E5%AE%A2/" class="category-item animate-entry">
+          <span class="category-name">博客</span>
           <span class="category-count">1</span>
         </a>
       
-        <a href="/engineering-notes-blog/categories/%E5%8D%9A%E5%AE%A2/" class="category-item animate-entry">
-          <span class="category-name">博客</span>
+        <a href="/engineering-notes-blog/categories/%E7%AB%99%E5%8A%A1/" class="category-item animate-entry">
+          <span class="category-name">站务</span>
           <span class="category-count">1</span>
         </a>
       
