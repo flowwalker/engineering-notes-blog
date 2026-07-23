@@ -143,7 +143,7 @@
       
       <span class="meta-item">
         <i class="fa fa-edit"></i>
-        <time datetime="2026-07-21">更新于 2026-07-21</time>
+        <time datetime="2026-07-23">更新于 2026-07-23</time>
       </span>
       
       
@@ -227,6 +227,9 @@
   <span class="hljs-attr">branch:</span> <span class="hljs-string">main</span></code></pre>
 
 <p><code>url</code> 和 <code>root</code> 必须按仓库名设置，否则生成的链接会出错。因为 GitHub Pages 项目站的地址是 <code>https://flowwalker.github.io/&lt;仓库名&gt;/</code>。</p>
+<blockquote>
+<p>注：数学博客现已迁移到 Vercel 部署，通过自定义域名 <a href="https://math.flowwalker.top/">math.flowwalker.top</a> 访问，<code>_config.yml</code> 相应改为 <code>url: https://math.flowwalker.top</code>、<code>root: /</code>。</p>
+</blockquote>
 <h3 id="3-4-部署"><a href="#3-4-部署" class="headerlink" title="3.4 部署"></a>3.4 部署</h3><p>安装 <code>hexo-deployer-git</code> 后，每个子博客用：</p>
 <pre><code class="hljs bash">npx hexo clean &amp;&amp; npx hexo generate &amp;&amp; npx hexo deploy</code></pre>
 
